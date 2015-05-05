@@ -1,6 +1,25 @@
 {% extends "layout.html" %}
 
+
+
 {% block content %}
+
+{% if docs.length > 0 %}
+  <ul>
+    {% for doc in docs %}
+      <li>{{doc|page_link}}</li>
+    {% endfor %}
+  </ul>
+{% else %}
+  There are no pages. Why don't you <a href='/add'>add one</a>?
+{% endif %}
+
+<!-- <ul class="wikidocs">
+  {% for doc in docs %}
+    <li><a href={{doc.url_name}}>{{doc.title}}</a></li>
+  {% endfor %}
+</ul> -->
+
 	<div class="wikibody">
     <h1>BROWSE MY {{title}}</h1>
     <li><a href='/'>Fullstack Home</a></li>

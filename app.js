@@ -1,6 +1,6 @@
-var add_routes = require('./routes/add');
 var express = require('express');
 var swig = require('swig');
+require('./filters')(swig);
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -9,6 +9,8 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var add_routes = require('./routes/add');
+var wiki = require('./routes/wiki')
 
 var app = express();
 
@@ -28,6 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 app.use('/add', add_routes);
+app.use('/wiki', wiki)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

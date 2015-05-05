@@ -23,7 +23,7 @@ a {
 
 }
 
-#addPage {
+#add {
 	font-size: 12px;
 	padding-left: 30px;
 	color: #aaaaaa;
@@ -31,4 +31,14 @@ a {
 
 .wikibody {
 	margin: 50px;
+}
+
+.wikidocs {
+	margin: 50px;
+}
+
+.line {
+	height: 10px;
+	color: black;
+	background-color: black;
 }
