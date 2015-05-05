@@ -12,6 +12,7 @@ var pageSchema = new mongoose.Schema({
   body:     String,
   date:     { type: Date, default: Date.now },
   status:   Number,
+  ///tags:[String]
 });
 
 pageSchema.virtual('full_route').get(function () {

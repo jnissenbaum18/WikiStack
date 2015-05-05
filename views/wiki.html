@@ -1,18 +1,26 @@
 {% extends "layout.html" %}
 
-
+{% block title %}{{page.title}}{% endblock %}
 
 {% block content %}
 
 <!-- <div class="wikibody"> -->
+
+
   <ul class="wikidocs">
   {% for doc in docs %}
     <h1>{{doc.title}}</h1>
     <hr style="height:1px;background-color:#333333">
-    <p style="font-size:16px">{{doc.body}}</p>
+    <p style="font-size:16px">{{doc.body | marked}}</p>
 
   {% endfor %}
 </ul>
+
+
+
+
+
+
 <!-- {% if docs.length > 0 %}
   <ul>
     {% for doc in docs %}
