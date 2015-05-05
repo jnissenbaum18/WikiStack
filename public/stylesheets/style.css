@@ -1,0 +1,34 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.wikiheader {
+	background: #333333;
+	color: #aaaaaa;
+	font-size: 16px;
+	width: 100%;
+	height: 50px;
+	position: absolute;
+	padding-left: 60px;
+	padding-top: 15px;
+/*	padding-bottom: 2%;*/
+	font-weight: bold;
+	left: 0;
+	top: 0;
+
+}
+
+#addPage {
+	font-size: 12px;
+	padding-left: 30px;
+	color: #aaaaaa;
+}
+
+.wikibody {
+	margin: 50px;
+}
