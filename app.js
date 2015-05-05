@@ -1,3 +1,4 @@
+var add_routes = require('./routes/add');
 var express = require('express');
 var swig = require('swig');
 var path = require('path');
@@ -26,6 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/add', add_routes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
